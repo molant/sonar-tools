@@ -5,11 +5,14 @@
 This is a collection of small scripts that use `sonar` that could be
 reused in different scenarios.
 
+* [`crawler`][crawler] can be used to scan a list of websites stored in a text file
+  where each line is a URL.
+
 ## Building the project
 
 1. Clone this project locally.
-2. `npm install` all the dependencies.
-3. `npm run build` to compile the source code.
+1. `npm install` all the dependencies.
+1. `npm run build` to compile the source code.
 
 The output files will be in the `dist` folder.
 
