@@ -1,0 +1,23 @@
+# For more information about the configurations used
+# in this file, please see the Travis CI documentation.
+#
+# https://docs.travis-ci.com
+
+env:
+  global:
+
+language: node_js
+
+matrix:
+  include:
+    - os: linux
+
+      node_js:
+        - node
+      script:
+        - npm run build
+
+notifications:
+  email:
+    on_failure: always
+    on_success: never

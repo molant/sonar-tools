@@ -1,0 +1,43 @@
+{
+  "name": "sonar-tools",
+  "version": "0.1.0",
+  "description": "Collection of various use cases for sonar",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm-run-all build:*",
+    "build:assets": "cpx \"./scripts/**/{!(*.ts),.!(ts)}\" dist",
+    "build:ts": "tsc --outDir dist",
+    "clean": "rimraf dist",
+    "crawl": "npm run build && node dist/crawler/crawler.js dist/crawler/urls.txt",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint --ext md --ext ts --ignore-pattern dist .",
+    "lint:md": "markdownlint docs",
+    "watch:ts": "npm run build:ts -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonarwhal/sonar-tools.git"
+  },
+  "author": "molant",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sonarwhal/sonar-tools/issues"
+  },
+  "homepage": "https://github.com/sonarwhal/sonar-tools#readme",
+  "dependencies": {
+    "@sonarwhal/sonar": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/debug": "0.0.30",
+    "@types/node": "^8.0.29",
+    "cpx": "^1.5.0",
+    "eslint": "^4.7.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-typescript": "^0.7.0",
+    "markdownlint-cli": "^0.3.1",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.5.2",
+    "typescript-eslint-parser": "^8.0.0"
+  }
+}
