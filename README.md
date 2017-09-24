@@ -1,5 +1,7 @@
 # sonar-tools
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sonarwhal/sonar-tools.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/sonarwhal/sonar-tools.svg?branch=master)](https://travis-ci.org/sonarwhal/sonar-tools)
 
 This is a collection of small scripts that use `sonar` that could be
